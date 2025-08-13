@@ -58,6 +58,8 @@ export default {
 					'green-light': 'hsl(var(--brand-green-light))',
 					gold: 'hsl(var(--brand-gold))',
 					'gold-light': 'hsl(var(--brand-gold-light))',
+					brown: 'hsl(var(--brand-brown))',
+					'brown-light': 'hsl(var(--brand-brown-light))',
 				},
 				cream: 'hsl(var(--cream))',
 				wheat: 'hsl(var(--wheat))',

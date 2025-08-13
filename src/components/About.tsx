@@ -34,6 +34,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6">
               About Hayat Flour Mills
             </h2>
+            <div className="w-24 h-1 bg-brand-brown mx-auto mb-8"></div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               For generations, we have been committed to producing the finest quality flour, 
               combining traditional milling expertise with modern technology.

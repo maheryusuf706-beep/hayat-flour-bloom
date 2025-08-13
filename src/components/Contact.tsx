@@ -85,6 +85,7 @@ const Contact = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6">
               Get In Touch
             </h2>
+            <div className="w-24 h-1 bg-brand-brown mx-auto mb-8"></div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Ready to experience the quality of Hayat Flour Mills? Contact us today 
               for product information, quotes, or to discuss your flour needs.

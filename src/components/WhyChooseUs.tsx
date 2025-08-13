@@ -54,6 +54,7 @@ const WhyChooseUs = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-6">
               Why Choose Hayat Flour Mills?
             </h2>
+            <div className="w-24 h-1 bg-brand-brown mx-auto mb-8"></div>
             <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
               Our commitment to excellence, innovation, and community makes us the trusted 
               choice for quality flour products across the region.
