@@ -19,9 +19,11 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <div className="text-2xl font-serif font-bold text-primary">
-              Hayat Flour Mills
-            </div>
+            <img 
+              src="/lovable-uploads/18fdd0dc-9ce0-46cd-a6e9-d5c3bf21bfd9.png" 
+              alt="Hayat Flour Mills Ltd. Logo" 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
