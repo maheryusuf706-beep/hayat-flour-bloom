@@ -1,0 +1,149 @@
+import { Star, Heart, CheckCircle, DollarSign } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import abaaFlour from "@/assets/abaa-flour.jpg";
+import simaPoaFlour from "@/assets/sima-poa-flour.jpg";
+
+const Brands = () => {
+  const brands = [
+    {
+      name: "Abaa",
+      tagline: "Premium Excellence",
+      description: "Our premium flour brand designed for the discerning baker who demands nothing but the finest quality. Abaa delivers exceptional results for gourmet baking and professional kitchens.",
+      image: abaaFlour,
+      features: [
+        "Ultra-fine texture",
+        "Rich baking results",
+        "Premium wheat selection",
+        "Perfect for artisan baking"
+      ],
+      icon: Star,
+      color: "primary",
+      gradient: "from-primary to-primary/80"
+    },
+    {
+      name: "Sima Poa",
+      tagline: "Everyday Quality",
+      description: "Our reliable everyday flour brand that brings consistent quality and great taste to every family kitchen. Sima Poa makes delicious baking accessible and affordable for everyone.",
+      image: simaPoaFlour,
+      features: [
+        "Great value",
+        "Consistent quality",
+        "Family-friendly",
+        "Perfect for daily baking"
+      ],
+      icon: Heart,
+      color: "brand-gold",
+      gradient: "from-brand-gold to-brand-gold-light"
+    }
+  ];
+
+  return (
+    <section id="brands" className="py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6">
+              Our Flour Brands
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              From premium artisan baking to everyday family meals, we offer flour brands 
+              that cater to every need and budget without compromising on quality.
+            </p>
+          </div>
+
+          {/* Brands Grid */}
+          <div className="grid lg:grid-cols-2 gap-12">
+            {brands.map((brand, index) => (
+              <Card 
+                key={brand.name}
+                className="group overflow-hidden border-0 shadow-medium hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+              >
+                <CardContent className="p-0">
+                  {/* Brand Header */}
+                  <div className={`bg-gradient-to-r ${brand.gradient} p-8 text-white relative overflow-hidden`}>
+                    <div className="absolute top-0 right-0 opacity-10">
+                      <brand.icon className="h-32 w-32" />
+                    </div>
+                    <div className="relative z-10">
+                      <h3 className="text-3xl md:text-4xl font-serif font-bold mb-2">
+                        {brand.name}
+                      </h3>
+                      <p className="text-lg opacity-90">{brand.tagline}</p>
+                    </div>
+                  </div>
+
+                  {/* Brand Content */}
+                  <div className="p-8">
+                    <div className="grid md:grid-cols-2 gap-6 items-center">
+                      {/* Product Image */}
+                      <div className="order-2 md:order-1">
+                        <img 
+                          src={brand.image}
+                          alt={`${brand.name} flour package`}
+                          className="w-full h-64 object-cover rounded-lg shadow-soft hover-glow transition-all duration-300"
+                        />
+                      </div>
+
+                      {/* Brand Details */}
+                      <div className="order-1 md:order-2 space-y-6">
+                        <p className="text-muted-foreground leading-relaxed">
+                          {brand.description}
+                        </p>
+
+                        {/* Features */}
+                        <div className="space-y-3">
+                          <h4 className="font-semibold text-primary">Key Features:</h4>
+                          <ul className="space-y-2">
+                            {brand.features.map((feature, featureIndex) => (
+                              <li key={featureIndex} className="flex items-center gap-2">
+                                <CheckCircle className="h-4 w-4 text-brand-gold flex-shrink-0" />
+                                <span className="text-muted-foreground text-sm">{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* CTA */}
+                        <div className="pt-4">
+                          <a 
+                            href="#contact"
+                            className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors"
+                          >
+                            Learn More <span className="text-xs">→</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center mt-16">
+            <div className="bg-gradient-wheat rounded-xl p-8 border border-brand-gold/20">
+              <h3 className="text-2xl font-serif font-semibold text-primary mb-4">
+                Ready to Experience Quality?
+              </h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                Contact us today to learn more about our flour brands and find the perfect 
+                product for your baking needs.
+              </p>
+              <a 
+                href="#contact"
+                className="inline-flex items-center gap-2 bg-gradient-hero text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity hover-glow"
+              >
+                <DollarSign className="h-5 w-5" />
+                Get Pricing Information
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Brands;
