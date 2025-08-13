@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-wheat-field.jpg";
+import heroImage from "@/assets/hero-maize-field.jpg";
 
 const Hero = () => {
   return (
@@ -19,10 +19,10 @@ const Hero = () => {
             Hayat Flour Mills Ltd.
           </h1>
           <p className="text-xl md:text-2xl lg:text-3xl mb-8 hero-text opacity-90 animate-fade-in [animation-delay:0.2s]">
-            Premium Quality Flour for Every Kitchen
+            Premium Quality Maize Flour for Every Kitchen
           </p>
           <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto hero-text opacity-80 animate-fade-in [animation-delay:0.4s]">
-            Trusted by communities for generations, we deliver exceptional flour products 
+            Trusted by communities for generations, we deliver exceptional maize flour products 
             through advanced milling technology and unwavering commitment to quality.
           </p>
           

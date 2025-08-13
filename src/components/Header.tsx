@@ -22,7 +22,8 @@ const Header = () => {
             <img 
               src="/lovable-uploads/18fdd0dc-9ce0-46cd-a6e9-d5c3bf21bfd9.png" 
               alt="Hayat Flour Mills Ltd. Logo" 
-              className="h-12 w-auto"
+              className="h-16 w-auto mix-blend-multiply dark:mix-blend-normal"
+              style={{ filter: 'drop-shadow(0 0 0 transparent)' }}
             />
           </div>
 
