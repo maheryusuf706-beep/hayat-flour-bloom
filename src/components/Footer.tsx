@@ -25,22 +25,22 @@ const Footer = () => {
               Hayat Flour Mills Ltd.
             </div>
             <p className="text-white/80 mb-6 max-w-md">
-              For generations, we've been committed to producing the finest quality flour, 
+              We're committed to producing the finest quality flour, 
               combining traditional milling expertise with modern technology to serve 
               communities across the region.
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-brand-gold" />
-                <span className="text-sm text-white/80">123 Mill Street, Industrial District, Nairobi</span>
+                <span className="text-sm text-white/80">Kasarani Msa-Nbo Highway, Voi, Taita-Taveta</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-brand-gold" />
-                <span className="text-sm text-white/80">+254 700 123 456</span>
+                <span className="text-sm text-white/80">0785880880</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-brand-gold" />
-                <span className="text-sm text-white/80">info@hayatflour.com</span>
+                <span className="text-sm text-white/80">info@hayatflourmills.com</span>
               </div>
             </div>
           </div>
@@ -81,8 +81,8 @@ const Footer = () => {
             <div className="mt-6">
               <h4 className="font-medium mb-2">Business Hours</h4>
               <div className="text-sm text-white/80 space-y-1">
-                <div>Mon - Fri: 8:00 AM - 6:00 PM</div>
-                <div>Sat: 8:00 AM - 2:00 PM</div>
+                <div>Mon - Fri: 8:00 AM - 5:00 PM</div>
+                <div>Sat: 8:00 AM - 12:30 PM</div>
                 <div>Sun: Closed</div>
               </div>
             </div>
