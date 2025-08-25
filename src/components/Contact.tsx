@@ -20,22 +20,22 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      details: ["123 Mill Street", "Industrial District", "Nairobi, Kenya"]
+      details: ["Kasarani Msa-Nbo Highway", "Voi, Taita-Taveta", "Kenya"]
     },
     {
       icon: Phone,
       title: "Phone",
-      details: ["+254 700 123 456", "+254 700 789 012"]
+      details: ["0785880880", "0762880880"]
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@hayatflour.com", "sales@hayatflour.com"]
+      details: ["info@hayatflourmills.com", "sales@hayatflourmills.com"]
     },
     {
       icon: Clock,
       title: "Business Hours",
-      details: ["Mon - Fri: 8:00 AM - 6:00 PM", "Sat: 8:00 AM - 2:00 PM", "Sun: Closed"]
+      details: ["Mon - Fri: 8:00 AM - 5:00 PM", "Sat: 8:00 AM - 12:30 PM", "Sun: Closed"]
     }
   ];
 
@@ -121,15 +121,20 @@ const Contact = () => {
                 </Card>
               ))}
 
-              {/* Map Placeholder */}
+              {/* Interactive Map */}
               <Card className="border-0 shadow-soft">
                 <CardContent className="p-0">
-                  <div className="h-48 bg-gradient-to-br from-primary/10 to-brand-gold/10 rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="h-12 w-12 text-primary mx-auto mb-2" />
-                      <p className="text-muted-foreground">Interactive Map</p>
-                      <p className="text-xs text-muted-foreground">Coming Soon</p>
-                    </div>
+                  <div className="h-48 rounded-lg overflow-hidden">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8!2d38.557!3d-3.397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMjMnNDkuMiJTIDM4wrAzMycyNS4yIkU!5e0!3m2!1sen!2ske!4v1234567890"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Hayat Flour Mills Location"
+                    />
                   </div>
                 </CardContent>
               </Card>
@@ -250,14 +255,14 @@ const Contact = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="tel:+254700123456"
+                  href="tel:0785880880"
                   className="inline-flex items-center gap-2 bg-brand-gold text-primary px-6 py-3 rounded-lg font-medium hover:bg-brand-gold-light transition-colors"
                 >
                   <Phone className="h-5 w-5" />
-                  Call Now: +254 700 123 456
+                  Call Now: 0785880880
                 </a>
                 <a 
-                  href="mailto:info@hayatflour.com"
+                  href="mailto:info@hayatflourmills.com"
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-colors border border-white/20"
                 >
                   <Mail className="h-5 w-5" />

@@ -23,8 +23,8 @@ const WhyChooseUs = () => {
     {
       icon: Users,
       title: "Expert Team",
-      description: "Our experienced millers and quality control specialists bring decades of expertise to every product we create.",
-      stats: "50+ Years Experience"
+      description: "Our experienced millers and quality control specialists bring years of expertise to every product we create.",
+      stats: "5+ Years Experience"
     },
     {
       icon: Award,
@@ -92,11 +92,11 @@ const WhyChooseUs = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-brand-gold mb-2">50+</div>
+                <div className="text-3xl md:text-4xl font-bold text-brand-gold mb-2">5+</div>
                 <div className="text-white/80">Years of Experience</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-brand-gold mb-2">1000+</div>
+                <div className="text-3xl md:text-4xl font-bold text-brand-gold mb-2">10000+</div>
                 <div className="text-white/80">Happy Customers</div>
               </div>
               <div>
