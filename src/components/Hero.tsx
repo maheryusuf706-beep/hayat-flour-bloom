@@ -1,14 +1,25 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-maize-field.jpg";
 
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
+      {/* Background Video */}
+      <div className="absolute inset-0 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/hero-corn-field.mp4" type="video/mp4" />
+          {/* Fallback image for browsers that don't support video */}
+          <img 
+            src="/src/assets/hero-maize-field.jpg" 
+            alt="Maize field at sunset" 
+            className="w-full h-full object-cover"
+          />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-transparent"></div>
       </div>
 
@@ -22,7 +33,7 @@ const Hero = () => {
             Premium Quality Maize Flour for Every Kitchen
           </p>
           <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto hero-text opacity-80 animate-fade-in [animation-delay:0.4s]">
-            Trusted by communities for generations, we deliver exceptional maize flour products 
+            Bringing life to every kitchen with exceptional maize flour products 
             through advanced milling technology and unwavering commitment to quality.
           </p>
           
