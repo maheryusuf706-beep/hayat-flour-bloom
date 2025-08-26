@@ -138,6 +138,44 @@ const Contact = () => {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Certifications & Humanitarian Work */}
+              <Card className="border-0 shadow-soft">
+                <CardContent className="p-6">
+                  <h4 className="font-semibold text-primary mb-4 text-center">Our Commitments</h4>
+                  <div className="grid grid-cols-3 gap-4 mb-4">
+                    <div className="flex flex-col items-center">
+                      <img 
+                        src="/lovable-uploads/cb64f23e-e029-4fcb-8765-340f26b631a1.png" 
+                        alt="KEBS Standards Certification"
+                        className="h-12 w-auto mb-2"
+                      />
+                      <span className="text-xs text-center text-muted-foreground">Quality Standards</span>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <img 
+                        src="/lovable-uploads/f393640a-34f0-469c-b1ac-ef7d6a094f01.png" 
+                        alt="Fortification Program"
+                        className="h-12 w-auto mb-2"
+                      />
+                      <span className="text-xs text-center text-muted-foreground">Fortification</span>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <img 
+                        src="/lovable-uploads/081d9963-7aac-4482-aa9a-86a9a9f64324.png" 
+                        alt="Heart of Hayat Humanitarian Fund"
+                        className="h-12 w-auto mb-2"
+                      />
+                      <span className="text-xs text-center text-muted-foreground">Humanitarian Aid</span>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-sm text-muted-foreground">
+                      10% of our profits support humanitarian initiatives through Heart of Hayat
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
 
             {/* Contact Form */}

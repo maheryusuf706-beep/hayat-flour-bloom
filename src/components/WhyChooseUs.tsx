@@ -1,4 +1,4 @@
-import { Cog, Shield, MapPin, Users, Award, Zap } from "lucide-react";
+import { Cog, Shield, MapPin, Users, Heart, Zap } from "lucide-react";
 
 const WhyChooseUs = () => {
   const reasons = [
@@ -27,10 +27,10 @@ const WhyChooseUs = () => {
       stats: "5+ Years Experience"
     },
     {
-      icon: Award,
-      title: "Industry Recognition",
-      description: "Certified quality standards and industry recognition demonstrate our commitment to excellence and continuous improvement.",
-      stats: "ISO Certified"
+      icon: Heart,
+      title: "Humanitarian Work",
+      description: "10% of our profits go to humanitarian aid through Heart of Hayat, supporting communities and making a positive impact.",
+      stats: "10% Profit Share"
     },
     {
       icon: Zap,
