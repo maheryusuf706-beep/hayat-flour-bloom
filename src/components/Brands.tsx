@@ -8,13 +8,13 @@ const Brands = () => {
     {
       name: "Abaa",
       tagline: "Premium Excellence",
-      description: "Our premium flour brand designed for the discerning baker who demands nothing but the finest quality. Abaa delivers exceptional results for gourmet baking and professional kitchens.",
+      description: "Our premium maize flour crafted for consumers who demand the finest quality and taste. Abaa delivers a smooth texture and authentic flavor, making it ideal for traditional meals and refined dining experiences.",
       image: abaaFlour,
       features: [
-        "Ultra-fine texture",
-        "Rich baking results",
-        "Premium wheat selection",
-        "Perfect for artisan baking"
+        "Ultra-smooth texture",
+        "Rich, natural flavor",
+        "Premium maize selection",
+        "Perfect for gourmet ugali and porridge"
       ],
       icon: Star,
       color: "primary",
@@ -23,13 +23,13 @@ const Brands = () => {
     {
       name: "Sima Poa",
       tagline: "Everyday Quality",
-      description: "Our reliable everyday flour brand that brings consistent quality and great taste to every family kitchen. Sima Poa makes delicious baking accessible and affordable for everyone.",
+      description: "Our trusted everyday maize flour that brings consistent quality and great taste to every family kitchen. Sima Poa makes nutritious meals accessible and affordable for everyone.",
       image: simaPoaFlour,
       features: [
         "Great value",
         "Consistent quality",
         "Family-friendly",
-        "Perfect for daily baking"
+        "Perfect for daily ugali and porridge"
       ],
       icon: Heart,
       color: "brand-gold",
