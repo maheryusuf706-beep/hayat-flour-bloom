@@ -111,9 +111,31 @@ const Contact = () => {
                       <div>
                         <h4 className="font-semibold text-primary mb-2">{info.title}</h4>
                         {info.details.map((detail, detailIndex) => (
-                          <p key={detailIndex} className="text-muted-foreground text-sm">
-                            {detail}
-                          </p>
+                          <div key={detailIndex} className="text-muted-foreground text-sm">
+                            {info.title === "Phone" ? (
+                              <a 
+                                href={`tel:${detail}`}
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  if (window.confirm(`Call ${detail}?`)) {
+                                    window.location.href = `tel:${detail}`;
+                                  }
+                                }}
+                                className="hover:text-primary transition-colors cursor-pointer"
+                              >
+                                {detail}
+                              </a>
+                            ) : info.title === "Email" ? (
+                              <a 
+                                href={`mailto:${detail}`}
+                                className="hover:text-primary transition-colors"
+                              >
+                                {detail}
+                              </a>
+                            ) : (
+                              detail
+                            )}
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -138,33 +160,33 @@ const Contact = () => {
                   </div>
                 </CardContent>
               </Card>
+            </div>
 
+            {/* Contact Form */}
+            <div className="lg:col-span-2 space-y-8">
               {/* Certification & Standards Logos */}
               <Card className="border-0 shadow-soft bg-white">
-                <CardContent className="p-6">
-                  <div className="flex justify-center gap-8 items-center">
+                <CardContent className="p-8">
+                  <div className="flex justify-center gap-12 items-center">
                     <img 
                       src="/lovable-uploads/cb64f23e-e029-4fcb-8765-340f26b631a1.png" 
                       alt="KEBS Standards"
-                      className="h-20 w-auto filter drop-shadow-md hover:scale-105 transition-transform"
+                      className="h-32 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                     <img 
                       src="/lovable-uploads/f393640a-34f0-469c-b1ac-ef7d6a094f01.png" 
                       alt="Fortification Program"
-                      className="h-20 w-auto filter drop-shadow-md hover:scale-105 transition-transform"
+                      className="h-32 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                     <img 
                       src="/lovable-uploads/081d9963-7aac-4482-aa9a-86a9a9f64324.png" 
                       alt="Heart of Hayat"
-                      className="h-20 w-auto filter drop-shadow-md hover:scale-105 transition-transform"
+                      className="h-32 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                   </div>
                 </CardContent>
               </Card>
-            </div>
 
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
               <Card className="border-0 shadow-medium">
                 <CardHeader>
                   <CardTitle className="text-2xl font-serif text-primary">
