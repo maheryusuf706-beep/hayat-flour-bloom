@@ -5,12 +5,21 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
+      <picture className="absolute inset-0">
+        <source 
+          media="(max-width: 768px)" 
+          srcSet={heroImage.replace('.jpg', '-mobile.jpg')} 
+        />
+        <img 
+          src={heroImage}
+          alt="Maize field representing Hayat Flour Mills quality"
+          className="w-full h-full object-cover"
+          loading="eager"
+          width="1920"
+          height="1080"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-transparent"></div>
-      </div>
+      </picture>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">

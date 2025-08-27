@@ -82,6 +82,9 @@ const Brands = () => {
                         <img 
                           src={brand.image}
                           alt={`${brand.name} flour package`}
+                          width="400"
+                          height="256"
+                          loading="lazy"
                           className="w-full h-64 object-cover rounded-lg shadow-soft hover-glow transition-all duration-300"
                         />
                       </div>

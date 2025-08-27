@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,7 +14,27 @@ const Contact = () => {
     company: "",
     message: ""
   });
+  const [loadMap, setLoadMap] = useState(false);
   const { toast } = useToast();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setLoadMap(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const mapContainer = document.getElementById("map-container");
+    if (mapContainer) {
+      observer.observe(mapContainer);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const contactInfo = [
     {
@@ -159,17 +179,21 @@ ${formData.message}`;
               {/* Interactive Map */}
               <Card className="border-0 shadow-soft">
                 <CardContent className="p-0">
-                  <div className="h-48 rounded-lg overflow-hidden">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8!2d38.557!3d-3.397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMjMnNDkuMiJTIDM4wrAzMycyNS4yIkU!5e0!3m2!1sen!2ske!4v1234567890"
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="Hayat Flour Mills Location"
-                    />
+                  <div id="map-container" className="h-48 rounded-lg overflow-hidden bg-muted flex items-center justify-center">
+                    {loadMap ? (
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8!2d38.557!3d-3.397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMjMnNDkuMiJTIDM4wrAzMycyNS4yIkU!5e0!3m2!1sen!2ske!4v1234567890"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Hayat Flour Mills Location"
+                      />
+                    ) : (
+                      <div className="text-muted-foreground">Loading map...</div>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -184,17 +208,26 @@ ${formData.message}`;
                     <img 
                       src="/lovable-uploads/cb64f23e-e029-4fcb-8765-340f26b631a1.png" 
                       alt="KEBS Standards"
-                      className="h-20 sm:h-24 lg:h-32 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      width="128"
+                      height="128"
+                      loading="lazy"
+                      className="h-16 sm:h-20 lg:h-24 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                     <img 
                       src="/lovable-uploads/f393640a-34f0-469c-b1ac-ef7d6a094f01.png" 
                       alt="Fortification Program"
-                      className="h-20 sm:h-24 lg:h-32 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      width="128"
+                      height="128"
+                      loading="lazy"
+                      className="h-16 sm:h-20 lg:h-24 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                     <img 
                       src="/lovable-uploads/081d9963-7aac-4482-aa9a-86a9a9f64324.png" 
                       alt="Heart of Hayat"
-                      className="h-20 sm:h-24 lg:h-32 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      width="128"
+                      height="128"
+                      loading="lazy"
+                      className="h-16 sm:h-20 lg:h-24 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                   </div>
                 </CardContent>
