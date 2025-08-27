@@ -60,10 +60,23 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
+    // Create email content
+    const subject = `Quote Request from ${formData.name}`;
+    const body = `Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone || 'Not provided'}
+Company: ${formData.company || 'Not provided'}
+
+Message:
+${formData.message}`;
+
+    // Open email client
+    const mailtoLink = `mailto:info@hayatflourmills.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+
     toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+      title: "Email Opened!",
+      description: "Your email client should open with the pre-filled message.",
     });
 
     // Reset form
@@ -167,21 +180,21 @@ const Contact = () => {
               {/* Certification & Standards Logos */}
               <Card className="border-0 shadow-soft bg-white">
                 <CardContent className="p-8">
-                  <div className="flex justify-center gap-12 items-center">
+                  <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-12 items-center">
                     <img 
                       src="/lovable-uploads/cb64f23e-e029-4fcb-8765-340f26b631a1.png" 
                       alt="KEBS Standards"
-                      className="h-32 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      className="h-20 sm:h-24 lg:h-32 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                     <img 
                       src="/lovable-uploads/f393640a-34f0-469c-b1ac-ef7d6a094f01.png" 
                       alt="Fortification Program"
-                      className="h-32 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      className="h-20 sm:h-24 lg:h-32 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                     <img 
                       src="/lovable-uploads/081d9963-7aac-4482-aa9a-86a9a9f64324.png" 
                       alt="Heart of Hayat"
-                      className="h-32 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      className="h-20 sm:h-24 lg:h-32 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                   </div>
                 </CardContent>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Facebook, Linkedin, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -20,10 +20,9 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <img 
-              src="/lovable-uploads/18fdd0dc-9ce0-46cd-a6e9-d5c3bf21bfd9.png" 
+              src="/lovable-uploads/830c4a1b-9eb6-4506-a8b3-4525170a1478.png" 
               alt="Hayat Flour Mills Ltd. Logo" 
-              className="h-16 w-auto mix-blend-multiply dark:mix-blend-normal"
-              style={{ filter: 'drop-shadow(0 0 0 transparent)' }}
+              className="h-16 w-auto"
             />
           </div>
 
@@ -43,7 +42,35 @@ const Header = () => {
           </div>
 
           {/* Contact Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-4">
+            {/* Social Media Icons */}
+            <div className="flex gap-3">
+              <a 
+                href="https://www.facebook.com/profile.php?id=61577803866616"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-colors"
+              >
+                <Facebook className="h-4 w-4 text-primary" />
+              </a>
+              <a 
+                href="https://www.linkedin.com/company/hayat-flour-mills-ltd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-colors"
+              >
+                <Linkedin className="h-4 w-4 text-primary" />
+              </a>
+              <a 
+                href="https://www.instagram.com/hayatflourmills/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-colors"
+              >
+                <Instagram className="h-4 w-4 text-primary" />
+              </a>
+            </div>
+            
             <Button 
               variant="default" 
               className="bg-gradient-hero hover:opacity-90"
