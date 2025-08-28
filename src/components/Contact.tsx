@@ -211,7 +211,7 @@ ${formData.message}`;
                       width="256"
                       height="256"
                       loading="lazy"
-                      className="h-32 sm:h-40 lg:h-48 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      className="h-26 sm:h-32 lg:h-38 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                     <img 
                       src="/lovable-uploads/f393640a-34f0-469c-b1ac-ef7d6a094f01.png" 
@@ -219,7 +219,7 @@ ${formData.message}`;
                       width="256"
                       height="256"
                       loading="lazy"
-                      className="h-32 sm:h-40 lg:h-48 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      className="h-29 sm:h-36 lg:h-43 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                     <img 
                       src="/lovable-uploads/081d9963-7aac-4482-aa9a-86a9a9f64324.png" 
@@ -227,7 +227,7 @@ ${formData.message}`;
                       width="256"
                       height="256"
                       loading="lazy"
-                      className="h-32 sm:h-40 lg:h-48 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      className="h-37 sm:h-46 lg:h-55 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                   </div>
                 </CardContent>
