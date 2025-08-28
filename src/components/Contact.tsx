@@ -204,14 +204,14 @@ ${formData.message}`;
               {/* Certification & Standards Logos */}
               <Card className="border-0 shadow-soft bg-white">
                 <CardContent className="p-8">
-                  <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-12 items-center">
+                  <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center">
                     <img 
                       src="/lovable-uploads/cb64f23e-e029-4fcb-8765-340f26b631a1.png" 
                       alt="KEBS Standards"
                       width="256"
                       height="256"
                       loading="lazy"
-                      className="h-32 sm:h-40 lg:h-48 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      className="h-24 sm:h-32 lg:h-40 w-auto filter drop-shadow-lg hover:scale-105 transition-transform flex-shrink-0"
                     />
                     <img 
                       src="/lovable-uploads/f393640a-34f0-469c-b1ac-ef7d6a094f01.png" 
@@ -219,7 +219,7 @@ ${formData.message}`;
                       width="256"
                       height="256"
                       loading="lazy"
-                      className="h-32 sm:h-40 lg:h-48 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      className="h-28 sm:h-36 lg:h-44 w-auto filter drop-shadow-lg hover:scale-105 transition-transform flex-shrink-0"
                     />
                     <img 
                       src="/lovable-uploads/081d9963-7aac-4482-aa9a-86a9a9f64324.png" 
@@ -227,7 +227,7 @@ ${formData.message}`;
                       width="256"
                       height="256"
                       loading="lazy"
-                      className="h-32 sm:h-40 lg:h-48 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      className="h-36 sm:h-44 lg:h-56 w-auto filter drop-shadow-lg hover:scale-105 transition-transform flex-shrink-0"
                     />
                   </div>
                 </CardContent>
