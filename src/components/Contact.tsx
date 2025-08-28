@@ -208,26 +208,26 @@ ${formData.message}`;
                     <img 
                       src="/lovable-uploads/cb64f23e-e029-4fcb-8765-340f26b631a1.png" 
                       alt="KEBS Standards"
-                      width="128"
-                      height="128"
+                      width="256"
+                      height="256"
                       loading="lazy"
-                      className="h-16 sm:h-20 lg:h-24 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      className="h-32 sm:h-40 lg:h-48 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                     <img 
                       src="/lovable-uploads/f393640a-34f0-469c-b1ac-ef7d6a094f01.png" 
                       alt="Fortification Program"
-                      width="128"
-                      height="128"
+                      width="256"
+                      height="256"
                       loading="lazy"
-                      className="h-16 sm:h-20 lg:h-24 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      className="h-32 sm:h-40 lg:h-48 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                     <img 
                       src="/lovable-uploads/081d9963-7aac-4482-aa9a-86a9a9f64324.png" 
                       alt="Heart of Hayat"
-                      width="128"
-                      height="128"
+                      width="256"
+                      height="256"
                       loading="lazy"
-                      className="h-16 sm:h-20 lg:h-24 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
+                      className="h-32 sm:h-40 lg:h-48 w-auto filter drop-shadow-lg hover:scale-105 transition-transform"
                     />
                   </div>
                 </CardContent>
