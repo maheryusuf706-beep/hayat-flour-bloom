@@ -67,7 +67,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic validation
@@ -80,33 +80,42 @@ const Contact = () => {
       return;
     }
 
-    // Create email content
-    const subject = `Quote Request from ${formData.name}`;
-    const body = `Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone || 'Not provided'}
-Company: ${formData.company || 'Not provided'}
+    try {
+      const response = await fetch('https://xpbyzaixzyathlaxdezq.supabase.co/functions/v1/send-contact-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
 
-Message:
-${formData.message}`;
+      const result = await response.json();
 
-    // Open email client
-    const mailtoLink = `mailto:info@hayatflourmills.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
+      if (response.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "We've received your message and will get back to you soon.",
+        });
 
-    toast({
-      title: "Email Opened!",
-      description: "Your email client should open with the pre-filled message.",
-    });
-
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      message: ""
-    });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          message: ""
+        });
+      } else {
+        throw new Error(result.error || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact us directly at info@hayatflourmills.com",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
