@@ -14,7 +14,75 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      blog_posts: {
+        Row: {
+          category: string
+          content: string
+          created_at: string
+          excerpt: string | null
+          featured_image_url: string | null
+          id: string
+          published: boolean
+          slug: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          category: string
+          content: string
+          created_at?: string
+          excerpt?: string | null
+          featured_image_url?: string | null
+          id?: string
+          published?: boolean
+          slug: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          content?: string
+          created_at?: string
+          excerpt?: string | null
+          featured_image_url?: string | null
+          id?: string
+          published?: boolean
+          slug?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      contact_submissions: {
+        Row: {
+          company: string | null
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          phone: string | null
+        }
+        Insert: {
+          company?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          phone?: string | null
+        }
+        Update: {
+          company?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          phone?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
