@@ -5,11 +5,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <picture className="absolute inset-0">
-        <source 
-          media="(max-width: 768px)" 
-          srcSet={heroImage.replace('.jpg', '-mobile.jpg')} 
-        />
+      <div className="absolute inset-0">
         <img 
           src={heroImage}
           alt="Maize field representing Hayat Flour Mills quality"
@@ -19,7 +15,7 @@ const Hero = () => {
           height="1080"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-transparent"></div>
-      </picture>
+      </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
