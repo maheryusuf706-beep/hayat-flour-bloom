@@ -36,7 +36,7 @@ const About = () => {
             </h2>
             <div className="w-24 h-1 bg-brand-brown mx-auto mb-8"></div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              For generations, we have been committed to producing the finest quality flour, 
+              For five years, we have been committed to producing the finest quality flour, 
               combining traditional milling expertise with modern technology.
             </p>
           </div>
@@ -58,15 +58,28 @@ const About = () => {
                 Our Story
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Founded with a vision to provide communities with the highest quality flour, 
-                Hayat Flour Mills Ltd. has grown from a small local operation to a leading 
-                flour producer. Our commitment to excellence, innovation, and community support 
-                has remained unwavering throughout our journey.
+                At Hayat Flour Mills, our story begins with a simple dream — to build something lasting, 
+                meaningful, and life-giving. For years, our family has been in logistics, moving goods 
+                across the country with over 100 trucks. But we always knew we wanted to do more than 
+                transport products — we wanted to create something of our own. Something that nourishes 
+                families, builds community, and leaves a legacy.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                We combine time-tested milling traditions with cutting-edge technology to ensure 
-                every grain of wheat is transformed into premium flour that meets the highest 
-                standards of quality and nutrition.
+                That vision led us into milling. We chose the name Hayat, meaning life, because flour 
+                is more than just an ingredient — it's the daily bread that sustains homes. Our logo 
+                reflects this belief: a strong tree symbolizing life and growth, surrounded by grains 
+                that represent nourishment and provision.
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Today, Hayat Flour Mills produces high-quality maize flour using modern milling technology, 
+                while honoring traditional values of care, consistency, and trust. But our mission goes 
+                beyond food. Through our initiative, the Heart of Hayat, we dedicate a portion of our 
+                earnings to humanitarian causes — giving back to communities and standing for humanity 
+                where it's needed most.
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                We're proud to combine family values, innovation, and purpose into every bag of flour 
+                we produce. Because for us, it's not just business. It's life.
               </p>
               
               <div className="bg-primary/5 rounded-lg p-6 border border-primary/10">

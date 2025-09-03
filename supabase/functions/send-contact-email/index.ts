@@ -2,10 +2,10 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.56.0';
 
-// Initialize Supabase client
-const supabase = createClient(
+// Initialize Supabase client with service role for database operations
+const supabaseAdmin = createClient(
   Deno.env.get('SUPABASE_URL') ?? '',
-  Deno.env.get('SUPABASE_ANON_KEY') ?? '',
+  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '',
 );
 
 // Lazy initialize Resend to handle missing API key gracefully
@@ -46,8 +46,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Processing contact submission for:", { name, email, company });
 
-    // First, save to database (this always works regardless of email service)
-    const { data: submission, error: dbError } = await supabase
+    // First, save to database using service role (bypasses RLS)
+    const { data: submission, error: dbError } = await supabaseAdmin
       .from('contact_submissions')
       .insert({
         name,
