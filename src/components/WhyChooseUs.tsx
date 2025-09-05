@@ -23,13 +23,13 @@ const WhyChooseUs = () => {
     {
       icon: Users,
       title: "Expert Team",
-      description: "Our experienced millers and quality control specialists bring years of expertise to every product we create.",
+      description: "Our experienced millers and quality control specialists bring a wealth of expertise to every product — bringing life in every bite.",
       stats: "10+ Years Experience"
     },
     {
       icon: Heart,
       title: "More Than Business",
-      description: "Through our Heart of Hayat initiative, part of our earnings go to humanitarian support. Choosing us means joining a cause bigger than flour.",
+      description: "Through our Heart of Hayat initiative, part of our earnings go to humanitarian aid. Choosing us means joining a cause bigger than flour.",
       stats: "10% Profit Share"
     },
     {
