@@ -76,7 +76,7 @@ const handler = async (req: Request): Promise<Response> => {
     try {
       const resendClient = getResend();
       const emailResponse = await resendClient.emails.send({
-        from: "Hayat Flour Mills <onboarding@resend.dev>",
+        from: "Hayat Flour Mills <no-reply@hayatflourmills.com>",
         reply_to: email,
         to: ["info@hayatflourmills.com"],
         subject: `New Contact Message from ${name}`,
