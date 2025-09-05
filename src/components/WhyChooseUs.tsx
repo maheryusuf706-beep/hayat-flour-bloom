@@ -4,8 +4,8 @@ const WhyChooseUs = () => {
   const reasons = [
     {
       icon: Shield,
-      title: "Quality Assurance",
-      description: "Every batch undergoes rigorous testing to ensure consistent quality and safety standards that exceed industry requirements.",
+      title: "Quality You Can Trust",
+      description: "Every batch undergoes rigorous testing to ensure consistent quality, nutritious, and safe flour for your family.",
       stats: "99.9% Quality Rate"
     },
     {
@@ -17,26 +17,26 @@ const WhyChooseUs = () => {
     {
       icon: MapPin,
       title: "Local Sourcing",
-      description: "We partner with local farmers to source the finest wheat, supporting our community while ensuring freshness and traceability.",
-      stats: "100% Local Wheat"
+      description: "We partner with local farmers to source the finest maize, supporting our community while ensuring freshness and traceability.",
+      stats: "100% Local Maize"
     },
     {
       icon: Users,
       title: "Expert Team",
       description: "Our experienced millers and quality control specialists bring years of expertise to every product we create.",
-      stats: "5+ Years Experience"
+      stats: "10+ Years Experience"
     },
     {
       icon: Heart,
-      title: "Humanitarian Work",
-      description: "10% of our profits go to humanitarian aid through Heart of Hayat, supporting communities and making a positive impact.",
+      title: "More Than Business",
+      description: "Through our Heart of Hayat initiative, part of our earnings go to humanitarian support. Choosing us means joining a cause bigger than flour.",
       stats: "10% Profit Share"
     },
     {
       icon: Zap,
       title: "Fast Delivery",
-      description: "Efficient distribution network ensures fresh flour reaches your doorstep quickly while maintaining optimal storage conditions.",
-      stats: "24-48 Hour Delivery"
+      description: "With a strong foundation in logistics, we know how to deliver — on time, every time. That same reliability drives our milling and distribution.",
+      stats: "24 Hour Delivery"
     }
   ];
 
@@ -92,7 +92,7 @@ const WhyChooseUs = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-brand-gold mb-2">5+</div>
+                <div className="text-3xl md:text-4xl font-bold text-brand-gold mb-2">10+</div>
                 <div className="text-white/80">Years of Experience</div>
               </div>
               <div>
