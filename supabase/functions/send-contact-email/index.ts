@@ -36,13 +36,23 @@ interface ContactEmailRequest {
 }
 
 const handler = async (req: Request): Promise<Response> => {
+  console.log("=== EDGE FUNCTION CALLED ===");
+  console.log("Method:", req.method);
+  console.log("Headers:", Object.fromEntries(req.headers.entries()));
+  
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
+    console.log("Handling CORS preflight request");
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { name, email, phone, company, message }: ContactEmailRequest = await req.json();
+    console.log("=== PROCESSING CONTACT FORM ===");
+    const bodyText = await req.text();
+    console.log("Raw body:", bodyText);
+    
+    const { name, email, phone, company, message }: ContactEmailRequest = JSON.parse(bodyText);
+    console.log("Parsed data:", { name, email, company });
 
     console.log("Processing contact submission for:", { name, email, company });
 
@@ -74,8 +84,12 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Try to send email, but don't fail if email service is unavailable
     try {
+      console.log("=== ATTEMPTING EMAIL SEND ===");
+      console.log("Getting Resend client...");
       const resendClient = getResend();
-      const emailResponse = await resendClient.emails.send({
+      console.log("Resend client initialized successfully");
+      
+      const emailPayload = {
         from: "Hayat Flour Mills <no-reply@hayatflourmills.com>",
         reply_to: email,
         to: ["info@hayatflourmills.com"],
@@ -91,9 +105,19 @@ const handler = async (req: Request): Promise<Response> => {
           <hr>
           <p><em>This message was sent through the Hayat Flour Mills contact form.</em></p>
         `,
-      });
+      };
+      
+      console.log("Email payload:", JSON.stringify(emailPayload, null, 2));
+      console.log("Sending email via Resend...");
+      
+      const emailResponse = await resendClient.emails.send(emailPayload);
+      console.log("Email response received:", JSON.stringify(emailResponse, null, 2));
 
-      console.log("Email sent successfully:", emailResponse);
+      if (emailResponse.error) {
+        throw new Error(`Resend API error: ${JSON.stringify(emailResponse.error)}`);
+      }
+
+      console.log("Email sent successfully with ID:", emailResponse.id);
 
       return new Response(JSON.stringify({ 
         success: true, 
