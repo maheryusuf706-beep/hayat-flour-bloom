@@ -1,7 +1,5 @@
 import { Star, Heart, CheckCircle, DollarSign } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import abaaFlour from "@/assets/abaa-flour.jpg";
-import simaPoaFlour from "@/assets/sima-poa-flour.jpg";
 
 const Brands = () => {
   const brands = [
@@ -9,7 +7,7 @@ const Brands = () => {
       name: "Abaa",
       tagline: "Premium Excellence",
       description: "Our premium maize flour crafted for consumers who demand the finest quality and taste. Abaa delivers a smooth texture and authentic flavor, making it ideal for traditional meals and refined dining experiences.",
-      image: abaaFlour,
+      image: "/lovable-uploads/63809cd6-c122-4f59-81ac-a6c0cedaffbe.png",
       features: [
         "Ultra-smooth texture",
         "Rich, natural flavor",
@@ -24,7 +22,7 @@ const Brands = () => {
       name: "Sima Poa",
       tagline: "Everyday Quality",
       description: "Our trusted everyday maize flour that brings consistent quality and great taste to every family kitchen. Sima Poa makes nutritious meals accessible and affordable for everyone.",
-      image: simaPoaFlour,
+      image: "/lovable-uploads/90f55208-7cc6-409c-abbe-c166ff7d52d5.png",
       features: [
         "Great value",
         "Consistent quality",
@@ -83,9 +81,9 @@ const Brands = () => {
                           src={brand.image}
                           alt={`${brand.name} flour package`}
                           width="400"
-                          height="256"
+                          height="400"
                           loading="lazy"
-                          className="w-full h-64 object-cover rounded-lg shadow-soft hover-glow transition-all duration-300"
+                          className="w-full h-80 object-contain rounded-lg shadow-soft hover-glow transition-all duration-300 bg-white"
                         />
                       </div>
 
