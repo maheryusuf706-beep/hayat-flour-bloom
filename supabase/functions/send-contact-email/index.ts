@@ -128,15 +128,25 @@ This message was sent through the Hayat Flour Mills contact form.
       console.log("Email response received:", JSON.stringify(emailResponse, null, 2));
 
       if (emailResponse.error) {
-        throw new Error(`Resend API error: ${JSON.stringify(emailResponse.error)}`);
+        console.error("RESEND API ERROR DETAILS:", {
+          error: emailResponse.error,
+          message: emailResponse.error.message,
+          name: emailResponse.error.name
+        });
+        throw new Error(`Resend API error: ${emailResponse.error.message || JSON.stringify(emailResponse.error)}`);
       }
 
-      console.log("Email sent successfully with ID:", emailResponse.id);
+      if (!emailResponse.data && !emailResponse.id) {
+        console.error("NO EMAIL ID OR DATA IN RESPONSE:", emailResponse);
+        throw new Error("Email sending failed - no email ID returned from Resend");
+      }
+
+      console.log("Email sent successfully with ID:", emailResponse.data?.id || emailResponse.id);
 
       return new Response(JSON.stringify({ 
         success: true, 
         submissionId: submission.id,
-        emailId: emailResponse.id 
+        emailId: emailResponse.data?.id || emailResponse.id 
       }), {
         status: 200,
         headers: {
@@ -145,12 +155,20 @@ This message was sent through the Hayat Flour Mills contact form.
         },
       });
     } catch (emailError: any) {
-      console.error("Email sending failed:", emailError);
+      console.error("=== EMAIL SENDING FAILED ===");
+      console.error("Error message:", emailError.message);
+      console.error("Error stack:", emailError.stack);
+      console.error("Full error object:", emailError);
+      
+      // Check if it's a domain verification issue
+      if (emailError.message && emailError.message.includes('domain')) {
+        console.error("DOMAIN ISSUE DETECTED - may need to verify sender domain in Resend");
+      }
       
       return new Response(JSON.stringify({ 
         success: false, 
         submissionId: submission.id,
-        error: emailError.message
+        error: emailError.message || "Unknown email error"
       }), {
         status: 500,
         headers: {
