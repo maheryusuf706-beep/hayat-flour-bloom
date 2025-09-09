@@ -105,6 +105,20 @@ const handler = async (req: Request): Promise<Response> => {
           <hr>
           <p><em>This message was sent through the Hayat Flour Mills contact form.</em></p>
         `,
+        text: `
+New Contact Form Submission
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone || 'Not provided'}
+Company: ${company || 'Not provided'}
+
+Message:
+${message}
+
+---
+This message was sent through the Hayat Flour Mills contact form.
+        `.trim(),
       };
       
       console.log("Email payload:", JSON.stringify(emailPayload, null, 2));
@@ -131,14 +145,14 @@ const handler = async (req: Request): Promise<Response> => {
         },
       });
     } catch (emailError: any) {
-      console.error("Email sending failed, but submission saved:", emailError);
+      console.error("Email sending failed:", emailError);
       
       return new Response(JSON.stringify({ 
-        success: true, 
+        success: false, 
         submissionId: submission.id,
-        emailWarning: "Message saved but email notification failed" 
+        error: emailError.message
       }), {
-        status: 200,
+        status: 500,
         headers: {
           "Content-Type": "application/json",
           ...corsHeaders,

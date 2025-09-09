@@ -90,16 +90,13 @@ const Contact = () => {
         throw error;
       }
 
-      if (data.emailWarning) {
-        toast({
-          title: "Message received!",
-          description: "We've saved your message and will get back to you soon.",
-        });
-      } else {
+      if (data.success) {
         toast({
           title: "Message sent successfully!",
-          description: "We've received your message and will get back to you soon.",
+          description: `Message emailed to info@hayatflourmills.com. Ref: ${data.emailId}`,
         });
+      } else {
+        throw new Error(data.error || "Email delivery failed");
       }
 
       // Reset form
@@ -114,7 +111,7 @@ const Contact = () => {
       console.error('Error sending message:', error);
       toast({
         title: "Failed to send message",
-        description: "Please try again or contact us directly at info@hayatflourmills.com",
+        description: "Email delivery failed. Please try again or contact us directly.",
         variant: "destructive",
       });
     }
