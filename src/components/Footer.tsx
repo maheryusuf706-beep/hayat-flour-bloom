@@ -11,8 +11,8 @@ const Footer = () => {
   ];
 
   const brands = [
-    { name: "Abaa Premium Flour", href: "#brands" },
-    { name: "Sima Poa Flour", href: "#brands" },
+    { name: "Sima Poa Premium Flour", href: "#brands" },
+    { name: "Abaa Flour", href: "#brands" },
   ];
 
   return (
