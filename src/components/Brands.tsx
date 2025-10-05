@@ -4,25 +4,25 @@ import { Card, CardContent } from "@/components/ui/card";
 const Brands = () => {
   const brands = [
     {
-      name: "Abaa",
+      name: "Sima Poa",
       tagline: "Premium Excellence",
-      description: "Our premium maize flour crafted for consumers who demand the finest quality and taste. Abaa delivers a smooth texture and authentic flavor, making it ideal for traditional meals and refined dining experiences.",
-      image: "/lovable-uploads/b647ba42-aae2-4655-b3a0-7440ecf00065.png",
+      description: "Our flagship premium maize flour crafted for consumers who demand the finest quality and taste. Sima Poa delivers an ultra-smooth texture and authentic flavor, making it ideal for traditional meals and refined dining experiences.",
+      image: "/lovable-uploads/6ffc4547-64db-4592-98fa-64465193d7d9.png",
       features: [
-        "Ultra-smooth texture",
+        "Ultra-smooth premium texture",
         "Rich, natural flavor",
         "Premium maize selection",
         "Perfect for gourmet ugali and porridge"
       ],
       icon: Star,
-      color: "primary",
-      gradient: "from-primary to-primary/80"
+      color: "brand-gold",
+      gradient: "from-brand-gold to-brand-gold-light"
     },
     {
-      name: "Sima Poa",
+      name: "Abaa",
       tagline: "Everyday Quality",
-      description: "Our trusted everyday maize flour that brings consistent quality and great taste to every family kitchen. Sima Poa makes nutritious meals accessible and affordable for everyone.",
-      image: "/lovable-uploads/6ffc4547-64db-4592-98fa-64465193d7d9.png",
+      description: "Our trusted everyday maize flour that brings consistent quality and great taste to every family kitchen. Abaa makes nutritious meals accessible and affordable for everyone.",
+      image: "/lovable-uploads/b647ba42-aae2-4655-b3a0-7440ecf00065.png",
       features: [
         "Great value",
         "Consistent quality",
@@ -30,8 +30,8 @@ const Brands = () => {
         "Perfect for daily ugali and porridge"
       ],
       icon: Heart,
-      color: "brand-gold",
-      gradient: "from-brand-gold to-brand-gold-light"
+      color: "primary",
+      gradient: "from-primary to-primary/80"
     }
   ];
 
