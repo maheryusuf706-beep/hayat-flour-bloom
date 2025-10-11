@@ -1,5 +1,7 @@
 import { Star, Heart, CheckCircle, DollarSign } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import simaPoaImage from "@/assets/sima-poa-flour.jpg";
+import abaaImage from "@/assets/abaa-flour.jpg";
 
 const Brands = () => {
   const brands = [
@@ -7,7 +9,7 @@ const Brands = () => {
       name: "Sima Poa",
       tagline: "Premium Excellence",
       description: "Our flagship premium maize flour crafted for consumers who demand the finest quality and taste. Sima Poa delivers an ultra-smooth texture and authentic flavor, making it ideal for traditional meals and refined dining experiences.",
-      image: "/lovable-uploads/6ffc4547-64db-4592-98fa-64465193d7d9.png",
+      image: simaPoaImage,
       features: [
         "Ultra-smooth premium texture",
         "Rich, natural flavor",
@@ -22,7 +24,7 @@ const Brands = () => {
       name: "Abaa",
       tagline: "Everyday Quality",
       description: "Our trusted everyday maize flour that brings consistent quality and great taste to every family kitchen. Abaa makes nutritious meals accessible and affordable for everyone.",
-      image: "/lovable-uploads/b647ba42-aae2-4655-b3a0-7440ecf00065.png",
+      image: abaaImage,
       features: [
         "Great value",
         "Consistent quality",

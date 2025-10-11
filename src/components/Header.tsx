@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Facebook, Linkedin, Instagram } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -68,6 +70,22 @@ const Header = () => {
                 className="w-8 h-8 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-colors"
               >
                 <Instagram className="h-4 w-4 text-primary" />
+              </a>
+              <a 
+                href="https://tiktok.com/@hayatflourmills"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-colors"
+              >
+                <FaTiktok className="h-4 w-4 text-primary" />
+              </a>
+              <a 
+                href="https://x.com/HayatFlourMills"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-colors"
+              >
+                <FaXTwitter className="h-4 w-4 text-primary" />
               </a>
             </div>
             

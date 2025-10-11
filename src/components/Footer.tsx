@@ -1,4 +1,6 @@
 import { MapPin, Phone, Mail, Facebook, Linkedin, Instagram } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -145,6 +147,22 @@ const Footer = () => {
                   className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold transition-colors"
                 >
                   <Instagram className="h-4 w-4" />
+                </a>
+                <a 
+                  href="https://tiktok.com/@hayatflourmills"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold transition-colors"
+                >
+                  <FaTiktok className="h-4 w-4" />
+                </a>
+                <a 
+                  href="https://x.com/HayatFlourMills"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold transition-colors"
+                >
+                  <FaXTwitter className="h-4 w-4" />
                 </a>
               </div>
             </div>
